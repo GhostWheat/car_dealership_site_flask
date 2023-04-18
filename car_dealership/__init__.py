@@ -1,5 +1,6 @@
 from flask import Flask
 from config import Config
+from site.routes import site
 
 app = Flask(__name__)
 

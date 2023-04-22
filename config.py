@@ -19,7 +19,6 @@ class Config():
     FLASK_ENV = os.environ.get('FLASK_ENV')
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DEPLOY_DATABASE_ URL') or 'sqlite:///' + os.path.join(basedir,'app.db')
-    SQLALCHEMY_TRACK_MODIFICATIONS = False #turns off messages for sqlalchemy
-
-
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir,'app.db')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False # this turns off messages from sqlalchemy regarding updates to our db,
+                                          # otherwise gets really cluttered

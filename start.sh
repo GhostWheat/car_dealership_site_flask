@@ -1,0 +1,1 @@
+gunicorn 'car_dealership:app'

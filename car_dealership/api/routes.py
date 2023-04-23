@@ -37,8 +37,8 @@ def create_car(our_user):
 @token_required
 def get_allcars(our_user):
     owner = our_user.token
-    drones = Drone.query.filter_by(user_token = owner).all()
-    response = allcars_schema.dump(drones)
+    cars = Car.query.filter_by(user_token = owner).all()
+    response = allcars_schema.dump(cars)
 
     return jsonify(response)
 

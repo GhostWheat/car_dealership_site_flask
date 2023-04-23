@@ -25,22 +25,29 @@
                     <li>HOME</li>
                 </a>
                 <a href="#">
-                    <li>ABOUT</li>
+                    <li><s>ABOUT</s></li>
                 </a>
                 <a href="#">
-                    <li>EXCELLENCE IN CAR-ING</li>
+                    <li><s>EXCELLENCE IN CAR-ING</s></li>
                 </a>
                 <a href="#">
                     <li>BUY A CAR NOW PLEASE</li>
                 </a>
-                <a href="#">
-                    <li>LOG IN</li>
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('site.profile') }}">
+                    <li>MY PROFILE</li>
                 </a>
-                <a href="#">
+                <a href="{{ url_for('auth.logout') }}">
                     <li>LOG OUT</li>
                 </a>
-                <a href="#">
+                {% else %}
+                <a href="{{ url_for('auth.signin') }}">
+                    <li>SIGN IN</li>
+                </a>
+                <a href="{{ url_for('auth.signup') }}">
                     <li>CREATE ACCOUNT</li>
+                </a>
+                {% endif %}
                 </a>
             </ul>
         </div>

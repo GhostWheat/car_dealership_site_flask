@@ -11,7 +11,7 @@ class UserLoginForm(FlaskForm):
 
 class CarForm(FlaskForm):
     color = StringField('color')
-    year = DecimalField('price', places = 0)
+    year = DecimalField('year', places = 0)
     make = StringField('make')
     model = StringField('model')
     submit_button = SubmitField()

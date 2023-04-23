@@ -38,6 +38,6 @@ def profile():
 
     current_user_token = current_user.token
 
-    cars = car.query.filter_by(user_token=current_user_token)
+    cars = Car.query.filter_by(user_token=current_user_token)
 
     return render_template('profile.html', form=my_car, cars = cars)

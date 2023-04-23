@@ -54,7 +54,7 @@ ul#horizontal-list li, ul#horizontal-list a{
 }
 /* end of Features Section */
 /* Community Section */
-#drone-image{
+#car-image{
     width: 50%;
     max-width: 75%;
     margin-left: 3vw;
@@ -81,7 +81,7 @@ ul#horizontal-list li, ul#horizontal-list a{
 
 .hero-section{
     height: 1000px;
-    background-image:linear-gradient(to right bottom, rgba(30, 115,172, 0.7), rgba(142, 57, 153, 0.6)), url(../images/drone-profile.jpg);
+    background-image:linear-gradient(to right bottom, rgba(30, 115,172, 0.7), rgba(142, 57, 153, 0.6)), url(../images/car-profile.jpg);
     background-size: cover;
     background-position: 35% 50%;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);

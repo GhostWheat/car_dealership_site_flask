@@ -26,8 +26,8 @@ def profile():
             model = my_car.model.data
             user_token = current_user.token
 
-            car = car( color, year, make, model, user_token)
-
+            car = Car( color, year, make, model, user_token)
+            # print(car)
             db.session.add(car)
             db.session.commit()
 
